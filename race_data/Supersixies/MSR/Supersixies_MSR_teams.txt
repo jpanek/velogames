@@ -1,0 +1,10 @@
+Juraj: Pogačar, Van Der Poel, Ganna, Tjøtta, Sütterlin, Vinokurov
+Jon: Pedersen, Van Der Poel, Ganna, Tulett, Pluimers, Skaarseth
+John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
+Rogier: Van Der Poel, Ganna, Pedersen, Sütterlin, Vauquelin, Azparren
+Carson: Pogačar, Pedersen, Cort, Sobrero, Pluimers, Tulett
+Rihards: Pogačar, Van Der Poel, Mihkels, Aular, Askey, Tarozzi
+Dane: Pogačar, Turconi, Kooij, Campenaerts, Pedersen, Skaarseth
+Inga: Pogačar, Milan, Ganna, Vauquelin, Azparren, Skaarseth
+Simis: Pogačar, Milan, Ganna, Tarozzi, Pluimers, Quartucci
+Manuel: Pogačar, Milan, Ganna, Campenaerts, Hamilton, Tjøtta
