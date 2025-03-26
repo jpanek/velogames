@@ -1,7 +1,16 @@
 from velogames import get_teams, get_cyclists, save_team_text
 
 #supersixies:
-sixies = {
+torino = {
+    "name":"Supersixies",
+    "league_id":61627774,
+    "stage":"Milano-Torino",
+    "stage_id":5,
+    "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
+    "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}"
+} 
+
+msr = {
     "name":"Supersixies",
     "league_id":61627774,
     "stage":"MSR",

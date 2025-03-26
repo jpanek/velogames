@@ -9,8 +9,10 @@ def construct_url(url_raw, league):
 def construct_filename(league, suffix=""):
     name = league["name"]
     stage = league.get("stage", "")  # Get stage if it exists, otherwise empty string
+    stage_id = league.get("stage_id","")
     filename = f"{name}_{stage}{suffix}.csv" if stage else f"{name}{suffix}.csv"
-    directory = os.path.join("race_data", name, stage) if stage else os.path.join("race_data", name)
+    #filename = f"{stage_id}_{stage}{suffix}.csv" if stage and stage_id else f"{name}{suffix}.csv"
+    directory = os.path.join("race_data", name, str(stage_id)+"_"+stage) if stage and stage_id else os.path.join("race_data", name)
     os.makedirs(directory, exist_ok=True)
     return os.path.join(directory, filename)
 
