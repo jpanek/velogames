@@ -1,4 +1,6 @@
 from velogames import get_teams, save_team_text, save_team_html
+from organize import generate_directory_html
+import os 
 
 #supersixies:
 torino = {
@@ -41,3 +43,5 @@ race = bruge
 teams = get_teams(race)
 save_team_text(teams, race)
 save_team_html(teams,race)
+
+generate_directory_html('race_data','overview.html')
