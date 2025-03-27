@@ -1,5 +1,5 @@
 from velogames import get_teams, save_team_text, save_team_html
-from organize import generate_directory_html
+from organize import generate_directory_html, generate_directory
 import os 
 
 #supersixies:
@@ -56,4 +56,4 @@ races = [bruge]
     save_team_html(teams,race)
  """
 
-generate_directory_html('race_data','index.html')
+generate_directory('race_data','index.html')
