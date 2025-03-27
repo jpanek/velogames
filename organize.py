@@ -53,11 +53,14 @@ def generate_directory_html(directory, output_file):
             # Sort the subdirectories alphabetically
             for subdir_name in sorted(subdirs.keys()):
                 files = subdirs[subdir_name]
-                html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}\n'
-                html += "                    <ul class=\"list-group ms-3\">\n"
+                html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}'
                 for file in files:
-                    html += f'                        <li class="list-group-item"><a href="{os.path.join(directory, race_name, subdir_name, file)}">{file}</a></li>\n'
-                html += "                    </ul>\n"
+                    html += f'                        <a href="{os.path.join(directory, race_name, subdir_name, file)}">{file}</a>\n'
+                #html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}\n'
+                #html += "                    <ul class=\"list-group ms-3\">\n"
+                #for file in files:
+                #    html += f'                        <li class="list-group-item"><a href="{os.path.join(directory, race_name, subdir_name, file)}">{file}</a></li>\n'
+                #html += "                    </ul>\n"
                 html += "                </li>\n"
         else:  # If there are no subdirectories
             for file in subdirs:
