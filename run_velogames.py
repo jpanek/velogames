@@ -32,8 +32,9 @@ bruge = {
 
 #catalunya
 catalunya = {
-    "name":"Catalunya",
+    "name":"Stage race championships",
     "league_id":61627774,
+    "stage": "Catalunya",
     "url": "https://www.velogames.com/catalunya/2025/leaguescores.php?league={league_id}",
     "team_url":"https://www.velogames.com/catalunya/2025/teamroster.php?tid={team_id}"
 }
@@ -48,7 +49,7 @@ e3 = {
 }
 
 races = [torino, msr, bruge, e3, catalunya]
-races = [e3]
+races = [catalunya]
 
 for race in races:
     teams = get_teams(race)

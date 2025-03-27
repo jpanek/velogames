@@ -1,7 +1,7 @@
 Jon: Martinez, Ayuso, Berrade, Van Eetvelt, Groves, De Pooter, Brennan, Laurance, Planckaert
-Inga: Ayuso, Yates, Van Eetvelt, Groves, Soler, Brennan, Foldager, Babor, Schelling
-Rogier: Ayuso, Van Eetvelt, Gall, Kämna, Torres, Schelling, Brennan, Van Den Berg, Groves
 Juraj: Ayuso, Roglič, Bittner, De Plus, Serry, Van Eetvelt, Kämna, Brennan, Schelling
+Rogier: Ayuso, Van Eetvelt, Gall, Kämna, Torres, Schelling, Brennan, Van Den Berg, Groves
+Inga: Ayuso, Yates, Van Eetvelt, Groves, Soler, Brennan, Foldager, Babor, Schelling
 Rihards: Groves, Ayuso, Fortunato, Aniołkowski, Brennan, De Pooter, Yates, Paret-Peintre, Uriarte
 Simis: Roglič, Gall, Groves, Soler, Barta, Brennan, Paret-Peintre, Fortunato, Geoghegan Hart
 Manuel: Roglič, Bernal, Gall, Martinez, Poels, Castellon, Geoghegan Hart, Hayter, Torres
