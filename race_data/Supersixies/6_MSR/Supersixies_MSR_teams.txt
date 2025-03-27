@@ -1,10 +1,10 @@
-Juraj: Merlier, Milan, Kristoff, Kooij, Moscon, Vinokurov
-Jon: Merlier, Milan, Kooij, Fretin, Jeannière, Hesters
+Juraj: Pogačar, Van Der Poel, Ganna, Tjøtta, Sütterlin, Vinokurov
+Jon: Pedersen, Van Der Poel, Ganna, Tulett, Pluimers, Skaarseth
 John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
-Rogier: Merlier, Kooij, Milan, Jeannière, Walls, Fretin
-Carson: Welsford, Merlier, Milan, Fretin, Wærenskjold, De Vries
-Rihards: Merlier, Kooij, Démare, Milan, Barbier, Mihkels
-Dane: Démare, De Lie, Merlier, Van Lerberghe, Milan, Hesters
-Simis: Milan, Philipsen, Merlier, Fretin, Barbier, Kubiš
-Manuel: Merlier, Milan, Groenewegen, Molano, Campenaerts, Thierry
-Inga: Milan, Kooij, Groenewegen, Merlier, Declercq, Gaze
+Rogier: Van Der Poel, Ganna, Pedersen, Sütterlin, Vauquelin, Azparren
+Carson: Pogačar, Pedersen, Cort, Sobrero, Pluimers, Tulett
+Rihards: Pogačar, Van Der Poel, Mihkels, Aular, Askey, Tarozzi
+Dane: Pogačar, Turconi, Kooij, Campenaerts, Pedersen, Skaarseth
+Inga: Pogačar, Milan, Ganna, Vauquelin, Azparren, Skaarseth
+Simis: Pogačar, Milan, Ganna, Tarozzi, Pluimers, Quartucci
+Manuel: Pogačar, Milan, Ganna, Campenaerts, Hamilton, Tjøtta

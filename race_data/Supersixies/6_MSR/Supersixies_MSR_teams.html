@@ -11,20 +11,44 @@
             margin: 20px;
             background-color: #f8f9fa;
         }
+
         .container {
-            max-width: 90%;
+            max-width: 80%;  /* Limited width to improve alignment */
             margin: auto;
+        }
+
         h2 {
             text-align: center;
             margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #343a40;
         }
+
+        .table {
+            font-size: 0.9rem;  /* Make the font size smaller for compactness */
+        }
+
         .table th {
             background-color: #007bff;
             color: white;
             text-align: center;
+            padding: 10px 15px;  /* Adjusted padding */
         }
-        .table tbody td {
+
+        .table td {
             text-align: center;
+            padding: 8px 12px;  /* Adjusted padding */
+        }
+
+        .table tbody td {
+            background-color: #ffffff;
+            border-top: 1px solid #dee2e6;
+        }
+
+        /* Compact the columns further */
+        .small-cell {
+            padding: 2px 5px;  /* Reduce padding */
+            font-size: 0.85rem; /* Reduce font size */
         }
     </style>
 </head>
@@ -36,14 +60,14 @@
         </h2>
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
-                <thead><tr><th>Juraj</th><th>Jon</th><th>John</th><th>Rogier</th><th>Carson</th><th>Rihards</th><th>Dane</th><th>Simis</th><th>Manuel</th><th>Inga</th></tr></thead>
-<tbody><tr><th>Boonens on cocaine</th><th>Short term glory</th><th>Pedaling Squares</th><th>Combattant du Nord</th><th>Turn Down for Wout</th><th>Nice For Watts</th><th>Spin Cycle</th><th>Marss</th><th>Peaky blunders</th><th>Buba Rače | Lease a Pate</th></tr>
-<tr><td>Merlier</td><td>Merlier</td><td>Pogačar</td><td>Merlier</td><td>Welsford</td><td>Merlier</td><td>Démare</td><td>Milan</td><td>Merlier</td><td>Milan</td></tr>
-<tr><td>Milan</td><td>Milan</td><td>Van Der Poel</td><td>Kooij</td><td>Merlier</td><td>Kooij</td><td>De Lie</td><td>Philipsen</td><td>Milan</td><td>Kooij</td></tr>
-<tr><td>Kristoff</td><td>Kooij</td><td>Matthews</td><td>Milan</td><td>Milan</td><td>Démare</td><td>Merlier</td><td>Merlier</td><td>Groenewegen</td><td>Groenewegen</td></tr>
-<tr><td>Kooij</td><td>Fretin</td><td>Skaarseth</td><td>Jeannière</td><td>Fretin</td><td>Milan</td><td>Van Lerberghe</td><td>Fretin</td><td>Molano</td><td>Merlier</td></tr>
-<tr><td>Moscon</td><td>Jeannière</td><td>Sütterlin</td><td>Walls</td><td>Wærenskjold</td><td>Barbier</td><td>Milan</td><td>Barbier</td><td>Campenaerts</td><td>Declercq</td></tr>
-<tr><td>Vinokurov</td><td>Hesters</td><td>Azparren</td><td>Fretin</td><td>De Vries</td><td>Mihkels</td><td>Hesters</td><td>Kubiš</td><td>Thierry</td><td>Gaze</td></tr>
+                <thead><tr><th>Carson</th><th>Dane</th><th>Inga</th><th>John</th><th>Jon</th><th>Juraj</th><th>Manuel</th><th>Rihards</th><th>Rogier</th><th>Simis</th></tr></thead>
+<tbody><tr><th>Turn Down for Wout</th><th>Spin Cycle</th><th>Buba Rače | Lease a Pate</th><th>Pedaling Squares</th><th>Short term glory</th><th>Boonens on cocaine</th><th>Peaky blunders</th><th>Nice For Watts</th><th>Combattant du Nord</th><th>Marss</th></tr>
+<tr><td>Pogačar</td><td>Pogačar</td><td>Pogačar</td><td>Pogačar</td><td>Pedersen</td><td>Pogačar</td><td>Pogačar</td><td>Pogačar</td><td>Van Der Poel</td><td>Pogačar</td></tr>
+<tr><td>Pedersen</td><td>Turconi</td><td>Milan</td><td>Van Der Poel</td><td>Van Der Poel</td><td>Van Der Poel</td><td>Milan</td><td>Van Der Poel</td><td>Ganna</td><td>Milan</td></tr>
+<tr><td>Cort</td><td>Kooij</td><td>Ganna</td><td>Matthews</td><td>Ganna</td><td>Ganna</td><td>Ganna</td><td>Mihkels</td><td>Pedersen</td><td>Ganna</td></tr>
+<tr><td>Sobrero</td><td>Campenaerts</td><td>Vauquelin</td><td>Skaarseth</td><td>Tulett</td><td>Tjøtta</td><td>Campenaerts</td><td>Aular</td><td>Sütterlin</td><td>Tarozzi</td></tr>
+<tr><td>Pluimers</td><td>Pedersen</td><td>Azparren</td><td>Sütterlin</td><td>Pluimers</td><td>Sütterlin</td><td>Hamilton</td><td>Askey</td><td>Vauquelin</td><td>Pluimers</td></tr>
+<tr><td>Tulett</td><td>Skaarseth</td><td>Skaarseth</td><td>Azparren</td><td>Skaarseth</td><td>Vinokurov</td><td>Tjøtta</td><td>Tarozzi</td><td>Azparren</td><td>Quartucci</td></tr>
 </tbody>
             </table>
         </div>

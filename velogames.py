@@ -21,7 +21,12 @@ def get_teams(race):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
-    url = construct_url(race["url"], race)
+    # Ensure URL construction is consistent
+    if "stage_id" in race:
+        url = race["url"].format(league_id=race["league_id"], stage_id=race["stage_id"])
+    else:
+        url = race["url"].format(league_id=race["league_id"])
+
     response = requests.get(url, headers=headers)
     response.raise_for_status()
     
@@ -61,7 +66,12 @@ def get_cyclists(race, teams):
     all_cyclists = []
     
     for tid, team_name, manager in teams:
-        url = race["team_url"].format(team_id=tid)
+        # Adjust URL construction based on whether stage_id exists
+        if "stage_id" in race:
+            url = race["team_url"].format(team_id=tid, stage_id=race["stage_id"])
+        else:
+            url = race["team_url"].format(team_id=tid)
+
         response = requests.get(url, headers=headers)
         response.raise_for_status()
         
@@ -82,6 +92,8 @@ def get_cyclists(race, teams):
     
     print(f"Data saved to {filename}")
     return all_cyclists
+
+
 
 def save_team_text(full_team, race):
     team_dict = {}
@@ -110,19 +122,23 @@ def save_team_html(full_team, race):
             team_names[manager] = team_name
         team_dict[manager].append(rider)
 
-    max_riders = max(len(riders) for riders in team_dict.values())
+    max_riders = max(len(riders) for riders in team_dict.values()) if team_dict else 0
+
+    # Sort the managers alphabetically
+    sorted_managers = sorted(team_dict.keys())
 
     # Generate Bootstrap table HTML
     table_html = "<thead><tr>"
-    table_html += "".join(f"<th>{manager}</th>" for manager in team_dict.keys()) + "</tr></thead>\n"
-    table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in team_dict.keys()) + "</tr>\n"
+    table_html += "".join(f"<th>{manager}</th>" for manager in sorted_managers) + "</tr></thead>\n"
+    table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in sorted_managers) + "</tr>\n"
 
     for i in range(max_riders):
         table_html += "<tr>"
-        for manager in team_dict.keys():
+        for manager in sorted_managers:
             rider = team_dict[manager][i] if i < len(team_dict[manager]) else ""
             table_html += f"<td>{rider}</td>"
         table_html += "</tr>\n"
+    
     table_html += "</tbody>"
 
     # Read template and insert table

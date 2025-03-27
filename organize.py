@@ -36,12 +36,12 @@ def generate_directory_html(directory, output_file):
             if race_name not in race_dirs:
                 race_dirs[race_name] = {}
 
-            if len(path_parts) > 1:  # If there are subdirectories
+            if len(path_parts) > 1:
                 subdir_name = path_parts[1]
                 if subdir_name not in race_dirs[race_name]:
                     race_dirs[race_name][subdir_name] = []
                 race_dirs[race_name][subdir_name].extend(html_files)
-            else:  # No subdirectories, just the race name
+            else:
                 race_dirs[race_name] = html_files
 
     # For each race, generate the nested HTML structure
@@ -50,19 +50,18 @@ def generate_directory_html(directory, output_file):
         html += "            <ul class=\"list-group ms-3\">\n"
         
         if isinstance(subdirs, dict):  # If there are subdirectories
-            for subdir_name, files in subdirs.items():
+            # Sort the subdirectories alphabetically
+            for subdir_name in sorted(subdirs.keys()):
+                files = subdirs[subdir_name]
                 html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}\n'
                 html += "                    <ul class=\"list-group ms-3\">\n"
                 for file in files:
-                    # Generate the correct href with relative path
-                    href = os.path.join("race_data", race_name, subdir_name, file)
-                    html += f'                        <li class="list-group-item"><a href="{href}">{file}</a></li>\n'
+                    html += f'                        <li class="list-group-item"><a href="{os.path.join(directory, race_name, subdir_name, file)}">{file}</a></li>\n'
                 html += "                    </ul>\n"
                 html += "                </li>\n"
         else:  # If there are no subdirectories
             for file in subdirs:
-                href = os.path.join("race_data", race_name, file)
-                html += f'            <li class="list-group-item"><a href="{href}">{file}</a></li>\n'
+                html += f'            <li class="list-group-item"><a href="{os.path.join(directory, race_name, file)}">{file}</a></li>\n'
         
         html += "            </ul>\n"
         html += "        </li>\n"
