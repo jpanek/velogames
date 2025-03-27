@@ -50,9 +50,10 @@ e3 = {
 races = [torino, msr, bruge, e3, catalunya]
 #races = [bruge]
 
-for race in races:
+""" for race in races:
     teams = get_teams(race)
     save_team_text(teams, race)
     save_team_html(teams,race)
+ """
 
-generate_directory_html('race_data','overview.html')
+generate_directory_html('race_data','index.html')
