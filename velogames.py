@@ -130,7 +130,7 @@ def save_team_html(full_team, race):
     # Generate Bootstrap table HTML
 
     if max_riders == 0:
-        table_html = '<div class="alert alert-warning" role="alert">Not available yet</div>'
+        table_html = '<div class="alert alert-warning text-center" role="alert">Not available yet</div>'
     else:
         table_html = "<thead><tr>"
         table_html += "".join(f"<th>{manager}</th>" for manager in sorted_managers) + "</tr></thead>\n"
