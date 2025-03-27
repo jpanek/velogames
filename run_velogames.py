@@ -50,7 +50,7 @@ e3 = {
 }
 
 races = [torino, msr, bruge, e3, catalunya]
-races = [catalunya]
+races = [e3]
 
 """ for race in races:
     teams = get_teams(race)

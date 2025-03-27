@@ -7,7 +7,7 @@ def generate_directory_html(directory, output_file):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velogames MFCC teams</title>
+    <title>MFCC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
@@ -17,7 +17,7 @@ def generate_directory_html(directory, output_file):
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4">Race Data Files</h1>
+        <h1 class="my-4">Velogames MFCC teams</h1>
         <ul class="list-group">
 """
 
@@ -25,6 +25,7 @@ def generate_directory_html(directory, output_file):
     race_dirs = {}
 
     for root, dirs, files in os.walk(directory):
+        files.sort()
         # Filter out non-HTML files
         html_files = [file for file in files if file.endswith(".html")]
 
