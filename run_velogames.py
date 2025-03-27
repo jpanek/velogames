@@ -36,7 +36,7 @@ catalunya = {
     "team_url":"https://www.velogames.com/catalunya/2025/teamroster.php?tid={team_id}"
 }
 
-race = catalunya
+race = bruge
 
 teams = get_teams(race)
 save_team_text(teams, race)
