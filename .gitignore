@@ -26,3 +26,6 @@ Thumbs.db
 
 # Race data or temporary files
 #race_data/
+
+#auto files:
+update_velogames.sh
