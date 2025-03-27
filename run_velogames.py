@@ -26,6 +26,7 @@ bruge = {
     "league_id":61627774,
     "stage":"Brugge-De-Panne",
     "stage_id":7,
+    "race_date":"2025-03-27",
     "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
 }
@@ -45,7 +46,7 @@ e3 = {
     "league_id":61627774,
     "stage":"E3",
     "stage_id":8,
-    "race_date":"2025-03-27",
+    "race_date":"2025-03-28",
     "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
 }
@@ -103,7 +104,7 @@ roubaix = {
 
 
 races = [torino, msr, bruge, e3, catalunya]
-races = [e3, gent, dwars, scheldeprijs, roubaix]
+races = [bruge,e3, gent, dwars, scheldeprijs, roubaix]
 
 today = datetime.today().date()
 
