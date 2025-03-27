@@ -32,7 +32,7 @@ bruge = {
 
 #catalunya
 catalunya = {
-    "name":"Stage race championships",
+    "name":"Stage-races",
     "league_id":61627774,
     "stage": "Catalunya",
     "stage_id": 7,
@@ -59,11 +59,11 @@ gent = {
 }
 
 races = [torino, msr, bruge, e3, catalunya]
-races = [e3]
+races = [e3, catalunya]
 
-""" for race in races:
+for race in races:
     teams = get_teams(race)
     save_team_text(teams, race)
-    save_team_html(teams,race) """
+    save_team_html(teams,race)
 
 generate_directory_html('race_data','index.html')
