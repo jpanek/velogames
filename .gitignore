@@ -18,7 +18,7 @@ jupyter/
 *.code-workspace
 
 # Operating System files
-.DS_Store
+**/.DS_Store
 Thumbs.db
 
 # Log files
