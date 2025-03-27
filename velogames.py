@@ -98,3 +98,54 @@ def save_team_text(full_team, race):
             f.write(f"{manager}: {', '.join(riders)}\n")
     
     print(f"Team list saved to {filename}")
+
+def save_team_html(full_team, race):
+    team_dict = {}
+    team_names = {}
+
+    # Organize data
+    for tid, team_name, manager, rider, points in full_team:
+        if manager not in team_dict:
+            team_dict[manager] = []
+            team_names[manager] = team_name
+        team_dict[manager].append(rider)
+
+    max_riders = max(len(riders) for riders in team_dict.values())
+
+    # Generate Bootstrap table HTML
+    table_html = "<thead><tr>"
+    table_html += "".join(f"<th>{manager}</th>" for manager in team_dict.keys()) + "</tr></thead>\n"
+    table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in team_dict.keys()) + "</tr>\n"
+
+    for i in range(max_riders):
+        table_html += "<tr>"
+        for manager in team_dict.keys():
+            rider = team_dict[manager][i] if i < len(team_dict[manager]) else ""
+            table_html += f"<td>{rider}</td>"
+        table_html += "</tr>\n"
+    table_html += "</tbody>"
+
+    # Read template and insert table
+    with open("templates/template.html", "r", encoding="utf-8") as f:
+        template_html = f.read()
+
+    header = race['name']  # Start with the name
+
+    # Check if stage_id and stage exist and append them if they do
+    if race.get('stage_id') and race.get('stage'):
+        header += f" - {race['stage_id']} - {race['stage']}"
+    elif race.get('stage_id'):  # Include only stage_id if it exists
+        header += f" - {race['stage_id']}"
+    elif race.get('stage'):  # Include only stage if it exists
+        header += f" - {race['stage']}"
+    template_html = template_html.replace("<!-- HEADER GOES HERE -->", header)
+    final_html = template_html.replace("<!-- TABLE GOES HERE -->", table_html)
+
+    # Construct filename
+    filename = construct_filename(race, "_teams").replace(".csv", ".html")
+
+    # Save to file
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(final_html)
+    
+    print(f"Team table saved to {filename}")

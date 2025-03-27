@@ -1,4 +1,4 @@
-from velogames import get_teams, get_cyclists, save_team_text
+from velogames import get_teams, save_team_text, save_team_html
 
 #supersixies:
 torino = {
@@ -8,7 +8,7 @@ torino = {
     "stage_id":5,
     "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}"
-} 
+}
 
 msr = {
     "name":"Supersixies",
@@ -36,7 +36,8 @@ catalunya = {
     "team_url":"https://www.velogames.com/catalunya/2025/teamroster.php?tid={team_id}"
 }
 
-race = torino
+race = catalunya
 
 teams = get_teams(race)
 save_team_text(teams, race)
+save_team_html(teams,race)
