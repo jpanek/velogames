@@ -57,4 +57,4 @@ races = [catalunya]
     save_team_text(teams, race)
     save_team_html(teams,race) """
 
-generate_directory('race_data','index.html')
+generate_directory_html('race_data','index.html')
