@@ -25,4 +25,4 @@ Thumbs.db
 *.log
 
 # Race data or temporary files
-race_data/
+#race_data/
