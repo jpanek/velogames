@@ -49,8 +49,17 @@ e3 = {
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
 }
 
+gent = {
+    "name":"Supersixies",
+    "league_id":61627774,
+    "stage":"Gent-Wevelgem",
+    "stage_id":9,
+    "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
+    "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
+}
+
 races = [torino, msr, bruge, e3, catalunya]
-races = [e3]
+races = [e3, gent]
 
 """ for race in races:
     teams = get_teams(race)
