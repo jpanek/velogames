@@ -24,7 +24,7 @@ msr = {
 bruge = {
     "name":"Supersixies",
     "league_id":61627774,
-    "stage":"BruggeDePanne",
+    "stage":"Brugge-De-Panne",
     "stage_id":7,
     "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
@@ -48,12 +48,12 @@ e3 = {
 }
 
 races = [torino, msr, bruge, e3, catalunya]
-#races = [bruge]
+races = [bruge]
 
-""" for race in races:
+for race in races:
     teams = get_teams(race)
     save_team_text(teams, race)
     save_team_html(teams,race)
- """
+
 
 generate_directory_html('race_data','index.html')
