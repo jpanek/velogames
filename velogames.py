@@ -128,18 +128,22 @@ def save_team_html(full_team, race):
     sorted_managers = sorted(team_dict.keys())
 
     # Generate Bootstrap table HTML
-    table_html = "<thead><tr>"
-    table_html += "".join(f"<th>{manager}</th>" for manager in sorted_managers) + "</tr></thead>\n"
-    table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in sorted_managers) + "</tr>\n"
 
-    for i in range(max_riders):
-        table_html += "<tr>"
-        for manager in sorted_managers:
-            rider = team_dict[manager][i] if i < len(team_dict[manager]) else ""
-            table_html += f"<td>{rider}</td>"
-        table_html += "</tr>\n"
-    
-    table_html += "</tbody>"
+    if max_riders == 0:
+        table_html = '<div class="alert alert-warning" role="alert">Not available yet</div>'
+    else:
+        table_html = "<thead><tr>"
+        table_html += "".join(f"<th>{manager}</th>" for manager in sorted_managers) + "</tr></thead>\n"
+        table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in sorted_managers) + "</tr>\n"
+
+        for i in range(max_riders):
+            table_html += "<tr>"
+            for manager in sorted_managers:
+                rider = team_dict[manager][i] if i < len(team_dict[manager]) else ""
+                table_html += f"<td>{rider}</td>"
+            table_html += "</tr>\n"
+        
+        table_html += "</tbody>"
 
     # Read template and insert table
     with open("templates/template.html", "r", encoding="utf-8") as f:
