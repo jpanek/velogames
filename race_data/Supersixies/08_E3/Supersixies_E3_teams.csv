@@ -1,4 +1,16 @@
 TID,Team Name,Manager,Rider,Points
+20487,Pedaling Squares,John,Pogačar,0
+20487,Pedaling Squares,John,Van Der Poel,0
+20487,Pedaling Squares,John,Matthews,0
+20487,Pedaling Squares,John,Skaarseth,0
+20487,Pedaling Squares,John,Sütterlin,0
+20487,Pedaling Squares,John,Azparren,0
+61971,Marss,Simis,Van Der Poel,0
+61971,Marss,Simis,Van Aert,0
+61971,Marss,Simis,Veistroffer,0
+61971,Marss,Simis,Pithie,0
+61971,Marss,Simis,Tarling,0
+61971,Marss,Simis,Mihkels,0
 62321,Peaky blunders,Manuel,Van Der Poel,0
 62321,Peaky blunders,Manuel,Van Aert,0
 62321,Peaky blunders,Manuel,Ganna,0
@@ -17,18 +29,12 @@ TID,Team Name,Manager,Rider,Points
 96535,Nice For Watts,Rihards,Clynhens,0
 96535,Nice For Watts,Rihards,Chamberlain,0
 96535,Nice For Watts,Rihards,Skaarseth,0
-20487,Pedaling Squares,John,Pogačar,0
-20487,Pedaling Squares,John,Van Der Poel,0
-20487,Pedaling Squares,John,Matthews,0
-20487,Pedaling Squares,John,Skaarseth,0
-20487,Pedaling Squares,John,Sütterlin,0
-20487,Pedaling Squares,John,Azparren,0
-61971,Marss,Simis,Van Der Poel,0
-61971,Marss,Simis,Van Aert,0
-61971,Marss,Simis,Veistroffer,0
-61971,Marss,Simis,Pithie,0
-61971,Marss,Simis,Tarling,0
-61971,Marss,Simis,Mihkels,0
+61967,Boonens on cocaine,Juraj,Van Der Poel,0
+61967,Boonens on cocaine,Juraj,Pedersen,0
+61967,Boonens on cocaine,Juraj,Jorgenson,0
+61967,Boonens on cocaine,Juraj,Tarling,0
+61967,Boonens on cocaine,Juraj,Deman,0
+61967,Boonens on cocaine,Juraj,Clynhens,0
 61998,Combattant du Nord,Rogier,Van Der Poel,0
 61998,Combattant du Nord,Rogier,Naesen,0
 61998,Combattant du Nord,Rogier,Jorgenson,0
@@ -53,9 +59,3 @@ TID,Team Name,Manager,Rider,Points
 96890,Turn Down for Wout,Carson,Van Dijke,0
 96890,Turn Down for Wout,Carson,Tarling,0
 96890,Turn Down for Wout,Carson,Deweirdt,0
-61967,Boonens on cocaine,Juraj,Van Der Poel,0
-61967,Boonens on cocaine,Juraj,Pedersen,0
-61967,Boonens on cocaine,Juraj,Jorgenson,0
-61967,Boonens on cocaine,Juraj,Tarling,0
-61967,Boonens on cocaine,Juraj,Deman,0
-61967,Boonens on cocaine,Juraj,Clynhens,0

@@ -140,8 +140,7 @@ if 1:
             teams, results = get_teams(race)
             save_team_text(teams, race)
             save_team_html(teams,race)
-            if results:
-                generate_html(teams,race)
+            generate_html(teams,race)
 
 
 generate_directory_html('race_data','index.html')
