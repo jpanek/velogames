@@ -23,6 +23,7 @@ Thumbs.db
 
 # Log files
 *.log
+cron_log.txt
 
 # Race data or temporary files
 #race_data/

@@ -3,6 +3,14 @@ from organize import generate_directory_html, generate_directory
 from datetime import datetime, timedelta
 
 #supersixies:
+
+sixies_overall = {
+    "name":"Supersixies",
+    "league_id":61627774,
+    "stage":"Milano-Torino",
+    "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}"
+}
+
 torino = {
     "name":"Supersixies",
     "league_id":61627774,
