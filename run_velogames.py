@@ -122,7 +122,7 @@ stage_races = [catalunya]
 today = datetime.today().date()
 day_after = today + timedelta(days=1)
 
-if 1:
+if 0:
     for race in supersixies:
         race_date = datetime.strptime(race["race_date"], "%Y-%m-%d").date()
         if race_date == today or race_date == day_after:
@@ -132,7 +132,7 @@ if 1:
             if results:
                 generate_html(teams,race)
 
-if 1:
+if 0:
     for race in stage_races:
         race_start = datetime.strptime(race["race_start"], "%Y-%m-%d").date()
         race_end = datetime.strptime(race["race_end"], "%Y-%m-%d").date()

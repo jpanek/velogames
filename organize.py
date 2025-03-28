@@ -27,13 +27,13 @@ def generate_directory_html(directory, output_file):
     jakarta_time = datetime.now(jakarta_tz)
 
     # Format the datetime as needed
-    jkt_time = jakarta_time.strftime("%d %B '%y %H:%M")
+    jkt_time = jakarta_time.strftime("%d %B %H:%M")
 
 
     # Get the current datetime
     now = datetime.now()
     # Format the datetime
-    formatted_datetime = now.strftime("%d %B '%y %H:%M")
+    formatted_datetime = now.strftime("%d %B %H:%M")
     html += f"""
     <div class="alert alert-info text-center" role="alert">
         Updated {formatted_datetime} CET ({jkt_time} Jakarta time for kampung MFers)
