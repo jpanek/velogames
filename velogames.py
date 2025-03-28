@@ -57,7 +57,7 @@ def get_teams(race):
             writer.writerow(["TID", "Team Name", "Name"])
             writer.writerows(data)
             
-        print(f"Data saved to {filename}")
+        #print(f"Data saved to {filename}")
 
 
     full_team = get_cyclists(race,data)    
@@ -98,7 +98,7 @@ def get_cyclists(race, teams):
         writer.writerow(["TID", "Team Name", "Manager", "Rider", "Points"])
         writer.writerows(all_cyclists)
     
-    print(f"Data saved to {filename}")
+    #print(f"Data saved to {filename}")
     if pts > 0:
         results = True
     else: results = False
@@ -120,7 +120,7 @@ def save_team_text(full_team, race):
         for manager, riders in team_dict.items():
             f.write(f"{manager}: {', '.join(riders)}\n")
     
-    print(f"Team list saved to {filename}")
+    #print(f"Team list saved to {filename}")
 
 def save_team_html(full_team, race):
     team_dict = {}
@@ -179,7 +179,7 @@ def save_team_html(full_team, race):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(final_html)
     
-    print(f"Team table saved to {filename}")
+    print(f"Team composition saved to {filename}")
 
 
 def generate_html(full_team, race):
@@ -263,4 +263,4 @@ def generate_html(full_team, race):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(final_html)
 
-    print(f"Race HTML saved to {filename}")
+    print(f"Race results published to {filename}")

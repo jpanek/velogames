@@ -127,7 +127,6 @@ if 1:
         race_date = datetime.strptime(race["race_date"], "%Y-%m-%d").date()
         if race_date == today or race_date == day_after:
             teams, results = get_teams(race)
-            print(results)
             save_team_text(teams, race)
             save_team_html(teams,race)
             if results:
@@ -139,7 +138,6 @@ if 1:
         race_end = datetime.strptime(race["race_end"], "%Y-%m-%d").date()
         if today >=race_start and today <= race_end:
             teams, results = get_teams(race)
-            print(results)
             save_team_text(teams, race)
             save_team_html(teams,race)
             if results:
