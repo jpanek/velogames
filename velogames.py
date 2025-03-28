@@ -157,7 +157,7 @@ def save_team_html(full_team, race):
         table_html += "</tbody>"
 
     # Read template and insert table
-    with open("templates/template.html", "r", encoding="utf-8") as f:
+    with open("/Users/jurajpanek/Documents/code/velogames/templates/template.html", "r", encoding="utf-8") as f:
         template_html = f.read()
 
     header = race['name']  # Start with the name
@@ -243,7 +243,7 @@ def generate_html(full_team, race):
     chart_data_json = json.dumps(chart_data)
 
     # Read template and insert content
-    with open("templates/results.html", "r", encoding="utf-8") as f:
+    with open("/Users/jurajpanek/Documents/code/velogames/templates/results.html", "r", encoding="utf-8") as f:
         template_html = f.read()
 
     header = race['name']
