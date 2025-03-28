@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import os
+import json
 
 def construct_url(url_raw, league):
     return url_raw.format(**league)
@@ -10,6 +11,11 @@ def construct_filename(league, suffix=""):
     name = league["name"]
     stage = league.get("stage", "")  # Get stage if it exists, otherwise empty string
     stage_id = league.get("stage_id","")
+
+    # Format stage_id as two digits, if it's a number
+    if stage_id:
+        stage_id = f"{int(stage_id):02d}"  # Ensure it is always two digits
+
     filename = f"{name}_{stage}{suffix}.csv" if stage else f"{name}{suffix}.csv"
     #filename = f"{stage_id}_{stage}{suffix}.csv" if stage and stage_id else f"{name}{suffix}.csv"
     directory = os.path.join("race_data", name, str(stage_id)+"_"+stage) if stage and stage_id else os.path.join("race_data", name)
@@ -64,6 +70,7 @@ def get_cyclists(race, teams):
     }
     
     all_cyclists = []
+    pts = 0
     
     for tid, team_name, manager in teams:
         # Adjust URL construction based on whether stage_id exists
@@ -82,6 +89,7 @@ def get_cyclists(race, teams):
             if len(text) == 2:
                 rider, points = text
                 points = points.replace(" pts", "").strip()
+                pts += int(points)
                 all_cyclists.append([tid, team_name, manager, rider, points])
     
     filename = construct_filename(race, "_teams")
@@ -91,7 +99,10 @@ def get_cyclists(race, teams):
         writer.writerows(all_cyclists)
     
     print(f"Data saved to {filename}")
-    return all_cyclists
+    if pts > 0:
+        results = True
+    else: results = False
+    return all_cyclists, results
 
 
 
@@ -169,3 +180,87 @@ def save_team_html(full_team, race):
         f.write(final_html)
     
     print(f"Team table saved to {filename}")
+
+
+def generate_html(full_team, race):
+    team_dict = {}
+    team_names = {}
+
+    # Organize data
+    for tid, team_name, manager, rider, points in full_team:
+        if manager not in team_dict:
+            team_dict[manager] = []
+            team_names[manager] = team_name
+        team_dict[manager].append((rider, points))
+
+    max_riders = max(len(riders) for riders in team_dict.values()) if team_dict else 0
+
+    # Sort managers alphabetically
+    sorted_managers = sorted(team_dict.keys())
+
+    # Generate Table HTML
+    if max_riders == 0:
+        table_html = '<div class="alert alert-warning text-center" role="alert">Not available yet</div>'
+    else:
+        table_html = "<thead><tr>"
+        table_html += "".join(f"<th>{manager}</th>" for manager in sorted_managers) + "</tr></thead>\n"
+        table_html += "<tbody><tr>" + "".join(f"<th>{team_names[manager]}</th>" for manager in sorted_managers) + "</tr>\n"
+
+        for i in range(max_riders):
+            table_html += "<tr>"
+            for manager in sorted_managers:
+                rider_info = team_dict[manager][i] if i < len(team_dict[manager]) else ("", "")
+                rider, points = rider_info
+                table_html += f"<td>{rider} ({points})</td>" if rider else "<td></td>"
+            table_html += "</tr>\n"
+
+        table_html += "</tbody>"
+
+    # Prepare Chart.js Data
+    labels = sorted_managers
+    datasets = []
+    
+    # Create dataset for each rider
+    rider_point_dict = {}
+    for manager, riders in team_dict.items():
+        for i, (rider, points) in enumerate(riders):
+            if rider not in rider_point_dict:
+                rider_point_dict[rider] = [0] * len(sorted_managers)
+            rider_point_dict[rider][sorted_managers.index(manager)] = points
+
+    for rider, points in rider_point_dict.items():
+        datasets.append({
+            "label": rider,
+            "data": points,
+            "backgroundColor": f"rgba({(hash(rider) % 256)}, {(hash(rider) // 256 % 256)}, {(hash(rider) // 65536 % 256)}, 0.7)"
+        })
+
+    chart_data = {
+        "labels": labels,
+        "datasets": datasets
+    }
+
+    chart_data_json = json.dumps(chart_data)
+
+    # Read template and insert content
+    with open("templates/results.html", "r", encoding="utf-8") as f:
+        template_html = f.read()
+
+    header = race['name']
+    if race.get('stage_id') and race.get('stage'):
+        header += f" - {race['stage_id']} - {race['stage']}"
+    elif race.get('stage_id'):
+        header += f" - {race['stage_id']}"
+    elif race.get('stage'):
+        header += f" - {race['stage']}"
+
+    template_html = template_html.replace("<!-- HEADER GOES HERE -->", header)
+    template_html = template_html.replace("<!-- CHART DATA GOES HERE -->", chart_data_json)
+    final_html = template_html.replace("<!-- TABLE GOES HERE -->", table_html)
+
+    # Save to file
+    filename = construct_filename(race, "_results").replace(".csv", ".html")
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(final_html)
+
+    print(f"Race HTML saved to {filename}")

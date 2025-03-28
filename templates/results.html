@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .table td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2><!-- HEADER GOES HERE --></h2>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>
+        <script id="chart-data" type="application/json"><!-- CHART DATA GOES HERE --></script>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <!-- TABLE GOES HERE -->
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById("myBarChart").getContext("2d");
+        
+            // Load data from the placeholder
+            const chartData = JSON.parse(document.getElementById("chart-data").textContent);
+        
+            new Chart(ctx, {
+                type: "bar",
+                data: chartData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false  // Ensure legend is hidden
+                        }
+                    },
+                    elements: {
+                        bar: {
+                            borderWidth: 0  // Optional: hides the bar borders for a cleaner look
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

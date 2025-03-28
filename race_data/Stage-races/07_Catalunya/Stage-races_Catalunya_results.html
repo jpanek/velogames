@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .table td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Stage-races - 7 - Catalunya</h2>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>
+        <script id="chart-data" type="application/json">{"labels": ["Inga", "Jon", "Juraj", "Manuel", "Rihards", "Rogier", "Simis"], "datasets": [{"label": "Martinez", "data": [0, "228", 0, "228", 0, 0, 0], "backgroundColor": "rgba(110, 160, 248, 0.7)"}, {"label": "Ayuso", "data": ["400", "400", "400", 0, "400", "400", 0], "backgroundColor": "rgba(54, 113, 71, 0.7)"}, {"label": "Berrade", "data": [0, "0", 0, 0, 0, 0, 0], "backgroundColor": "rgba(41, 228, 49, 0.7)"}, {"label": "Van Eetvelt", "data": ["219", "219", "219", 0, 0, "219", 0], "backgroundColor": "rgba(77, 87, 124, 0.7)"}, {"label": "Groves", "data": ["293", "293", 0, 0, "293", "293", "293"], "backgroundColor": "rgba(219, 166, 17, 0.7)"}, {"label": "De Pooter", "data": [0, "5", 0, 0, "5", 0, 0], "backgroundColor": "rgba(8, 205, 7, 0.7)"}, {"label": "Brennan", "data": ["366", "366", "366", 0, "366", "366", "366"], "backgroundColor": "rgba(72, 128, 34, 0.7)"}, {"label": "Laurance", "data": [0, "100", 0, 0, 0, 0, 0], "backgroundColor": "rgba(222, 223, 2, 0.7)"}, {"label": "Planckaert", "data": [0, "113", 0, 0, 0, 0, 0], "backgroundColor": "rgba(33, 225, 83, 0.7)"}, {"label": "Rogli\u010d", "data": [0, 0, "391", "391", 0, 0, "391"], "backgroundColor": "rgba(44, 68, 228, 0.7)"}, {"label": "Bittner", "data": [0, 0, "93", 0, 0, 0, 0], "backgroundColor": "rgba(16, 192, 111, 0.7)"}, {"label": "De Plus", "data": [0, 0, "70", 0, 0, 0, 0], "backgroundColor": "rgba(245, 126, 209, 0.7)"}, {"label": "Serry", "data": [0, 0, "4", 0, 0, 0, 0], "backgroundColor": "rgba(43, 141, 178, 0.7)"}, {"label": "K\u00e4mna", "data": [0, 0, "10", 0, 0, "10", 0], "backgroundColor": "rgba(168, 27, 85, 0.7)"}, {"label": "Schelling", "data": ["8", 0, "8", 0, 0, "8", 0], "backgroundColor": "rgba(35, 116, 89, 0.7)"}, {"label": "Gall", "data": [0, 0, 0, "70", 0, "70", "70"], "backgroundColor": "rgba(224, 176, 156, 0.7)"}, {"label": "Torres", "data": [0, 0, 0, "4", 0, "31", 0], "backgroundColor": "rgba(146, 82, 212, 0.7)"}, {"label": "Van Den Berg", "data": [0, 0, 0, 0, 0, "60", 0], "backgroundColor": "rgba(182, 125, 214, 0.7)"}, {"label": "Yates", "data": ["61", 0, 0, 0, "61", 0, 0], "backgroundColor": "rgba(171, 39, 113, 0.7)"}, {"label": "Soler", "data": ["56", 0, 0, 0, 0, 0, "56"], "backgroundColor": "rgba(116, 140, 28, 0.7)"}, {"label": "Foldager", "data": ["30", 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(121, 3, 142, 0.7)"}, {"label": "Babor", "data": ["0", 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(169, 127, 220, 0.7)"}, {"label": "Fortunato", "data": [0, 0, 0, 0, "8", 0, "8"], "backgroundColor": "rgba(70, 110, 90, 0.7)"}, {"label": "Anio\u0142kowski", "data": [0, 0, 0, 0, "50", 0, 0], "backgroundColor": "rgba(60, 50, 204, 0.7)"}, {"label": "Paret-Peintre", "data": [0, 0, 0, 0, "4", 0, "4"], "backgroundColor": "rgba(28, 22, 240, 0.7)"}, {"label": "Uriarte", "data": [0, 0, 0, 0, "55", 0, 0], "backgroundColor": "rgba(72, 236, 143, 0.7)"}, {"label": "Barta", "data": [0, 0, 0, 0, 0, 0, "4"], "backgroundColor": "rgba(85, 65, 241, 0.7)"}, {"label": "Geoghegan Hart", "data": [0, 0, 0, "0", 0, 0, "0"], "backgroundColor": "rgba(190, 248, 85, 0.7)"}, {"label": "Bernal", "data": [0, 0, 0, "86", 0, 0, 0], "backgroundColor": "rgba(132, 120, 224, 0.7)"}, {"label": "Poels", "data": [0, 0, 0, "40", 0, 0, 0], "backgroundColor": "rgba(221, 21, 145, 0.7)"}, {"label": "Castellon", "data": [0, 0, 0, "44", 0, 0, 0], "backgroundColor": "rgba(66, 37, 249, 0.7)"}, {"label": "Hayter", "data": [0, 0, 0, "4", 0, 0, 0], "backgroundColor": "rgba(230, 153, 78, 0.7)"}]}</script>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead><tr><th>Inga</th><th>Jon</th><th>Juraj</th><th>Manuel</th><th>Rihards</th><th>Rogier</th><th>Simis</th></tr></thead>
+<tbody><tr><th>Buba Rače | Lease a Pate</th><th>Short term glory</th><th>Boonens on cocaine</th><th>Peaky blunders</th><th>Nice For Watts</th><th>Combattant du Nord</th><th>Marss</th></tr>
+<tr><td>Ayuso (400)</td><td>Martinez (228)</td><td>Ayuso (400)</td><td>Roglič (391)</td><td>Groves (293)</td><td>Ayuso (400)</td><td>Roglič (391)</td></tr>
+<tr><td>Yates (61)</td><td>Ayuso (400)</td><td>Roglič (391)</td><td>Bernal (86)</td><td>Ayuso (400)</td><td>Van Eetvelt (219)</td><td>Gall (70)</td></tr>
+<tr><td>Van Eetvelt (219)</td><td>Berrade (0)</td><td>Bittner (93)</td><td>Gall (70)</td><td>Fortunato (8)</td><td>Gall (70)</td><td>Groves (293)</td></tr>
+<tr><td>Groves (293)</td><td>Van Eetvelt (219)</td><td>De Plus (70)</td><td>Martinez (228)</td><td>Aniołkowski (50)</td><td>Kämna (10)</td><td>Soler (56)</td></tr>
+<tr><td>Soler (56)</td><td>Groves (293)</td><td>Serry (4)</td><td>Poels (40)</td><td>Brennan (366)</td><td>Torres (31)</td><td>Barta (4)</td></tr>
+<tr><td>Brennan (366)</td><td>De Pooter (5)</td><td>Van Eetvelt (219)</td><td>Castellon (44)</td><td>De Pooter (5)</td><td>Schelling (8)</td><td>Brennan (366)</td></tr>
+<tr><td>Foldager (30)</td><td>Brennan (366)</td><td>Kämna (10)</td><td>Geoghegan Hart (0)</td><td>Yates (61)</td><td>Brennan (366)</td><td>Paret-Peintre (4)</td></tr>
+<tr><td>Babor (0)</td><td>Laurance (100)</td><td>Brennan (366)</td><td>Hayter (4)</td><td>Paret-Peintre (4)</td><td>Van Den Berg (60)</td><td>Fortunato (8)</td></tr>
+<tr><td>Schelling (8)</td><td>Planckaert (113)</td><td>Schelling (8)</td><td>Torres (4)</td><td>Uriarte (55)</td><td>Groves (293)</td><td>Geoghegan Hart (0)</td></tr>
+</tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById("myBarChart").getContext("2d");
+        
+            // Load data from the placeholder
+            const chartData = JSON.parse(document.getElementById("chart-data").textContent);
+        
+            new Chart(ctx, {
+                type: "bar",
+                data: chartData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false  // Ensure legend is hidden
+                        }
+                    },
+                    elements: {
+                        bar: {
+                            borderWidth: 0  // Optional: hides the bar borders for a cleaner look
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

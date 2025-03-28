@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .table td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2>Supersixies - 6 - MSR</h2>
+
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>
+        <script id="chart-data" type="application/json">{"labels": ["Carson", "Dane", "Inga", "John", "Jon", "Juraj", "Manuel", "Rihards", "Rogier", "Simis"], "datasets": [{"label": "Poga\u010dar", "data": ["600", "600", "600", "600", 0, "600", "600", "600", 0, "600"], "backgroundColor": "rgba(227, 71, 101, 0.7)"}, {"label": "Van Der Poel", "data": [0, 0, 0, "720", "720", "720", 0, "720", "720", 0], "backgroundColor": "rgba(121, 136, 183, 0.7)"}, {"label": "Ganna", "data": [0, 0, "660", 0, "660", "660", "660", 0, "660", "660"], "backgroundColor": "rgba(112, 175, 107, 0.7)"}, {"label": "Tj\u00f8tta", "data": [0, 0, 0, 0, 0, "0", "0", 0, 0, 0], "backgroundColor": "rgba(204, 29, 22, 0.7)"}, {"label": "S\u00fctterlin", "data": [0, 0, 0, "0", 0, "0", 0, 0, "0", 0], "backgroundColor": "rgba(154, 168, 93, 0.7)"}, {"label": "Vinokurov", "data": [0, 0, 0, 0, 0, "0", 0, 0, 0, 0], "backgroundColor": "rgba(216, 204, 190, 0.7)"}, {"label": "Pedersen", "data": ["300", "300", 0, 0, "300", 0, 0, 0, "300", 0], "backgroundColor": "rgba(218, 141, 99, 0.7)"}, {"label": "Tulett", "data": ["180", 0, 0, 0, "180", 0, 0, 0, 0, 0], "backgroundColor": "rgba(28, 142, 218, 0.7)"}, {"label": "Pluimers", "data": ["0", 0, 0, 0, "0", 0, 0, 0, 0, "0"], "backgroundColor": "rgba(233, 153, 76, 0.7)"}, {"label": "Skaarseth", "data": [0, "0", "0", "0", "0", 0, 0, 0, 0, 0], "backgroundColor": "rgba(58, 1, 86, 0.7)"}, {"label": "Matthews", "data": [0, 0, 0, "420", 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(35, 199, 99, 0.7)"}, {"label": "Azparren", "data": [0, 0, "0", "0", 0, 0, 0, 0, "0", 0], "backgroundColor": "rgba(201, 18, 29, 0.7)"}, {"label": "Vauquelin", "data": [0, 0, "0", 0, 0, 0, 0, 0, "0", 0], "backgroundColor": "rgba(64, 89, 187, 0.7)"}, {"label": "Cort", "data": ["330", 0, 0, 0, 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(222, 143, 7, 0.7)"}, {"label": "Sobrero", "data": ["0", 0, 0, 0, 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(137, 231, 125, 0.7)"}, {"label": "Mihkels", "data": [0, 0, 0, 0, 0, 0, 0, "0", 0, 0], "backgroundColor": "rgba(62, 157, 26, 0.7)"}, {"label": "Aular", "data": [0, 0, 0, 0, 0, 0, 0, "36", 0, 0], "backgroundColor": "rgba(42, 15, 134, 0.7)"}, {"label": "Askey", "data": [0, 0, 0, 0, 0, 0, 0, "0", 0, 0], "backgroundColor": "rgba(59, 226, 76, 0.7)"}, {"label": "Tarozzi", "data": [0, 0, 0, 0, 0, 0, 0, "0", 0, "0"], "backgroundColor": "rgba(118, 71, 26, 0.7)"}, {"label": "Turconi", "data": [0, "120", 0, 0, 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(193, 181, 250, 0.7)"}, {"label": "Kooij", "data": [0, "285", 0, 0, 0, 0, 0, 0, 0, 0], "backgroundColor": "rgba(75, 138, 75, 0.7)"}, {"label": "Campenaerts", "data": [0, "0", 0, 0, 0, 0, "0", 0, 0, 0], "backgroundColor": "rgba(234, 219, 204, 0.7)"}, {"label": "Milan", "data": [0, 0, "0", 0, 0, 0, "0", 0, 0, "0"], "backgroundColor": "rgba(58, 116, 239, 0.7)"}, {"label": "Quartucci", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, "0"], "backgroundColor": "rgba(60, 239, 153, 0.7)"}, {"label": "Hamilton", "data": [0, 0, 0, 0, 0, 0, "0", 0, 0, 0], "backgroundColor": "rgba(151, 214, 25, 0.7)"}]}</script>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead><tr><th>Carson</th><th>Dane</th><th>Inga</th><th>John</th><th>Jon</th><th>Juraj</th><th>Manuel</th><th>Rihards</th><th>Rogier</th><th>Simis</th></tr></thead>
+<tbody><tr><th>Turn Down for Wout</th><th>Spin Cycle</th><th>Buba Rače | Lease a Pate</th><th>Pedaling Squares</th><th>Short term glory</th><th>Boonens on cocaine</th><th>Peaky blunders</th><th>Nice For Watts</th><th>Combattant du Nord</th><th>Marss</th></tr>
+<tr><td>Pogačar (600)</td><td>Pogačar (600)</td><td>Pogačar (600)</td><td>Pogačar (600)</td><td>Pedersen (300)</td><td>Pogačar (600)</td><td>Pogačar (600)</td><td>Pogačar (600)</td><td>Van Der Poel (720)</td><td>Pogačar (600)</td></tr>
+<tr><td>Pedersen (300)</td><td>Turconi (120)</td><td>Milan (0)</td><td>Van Der Poel (720)</td><td>Van Der Poel (720)</td><td>Van Der Poel (720)</td><td>Milan (0)</td><td>Van Der Poel (720)</td><td>Ganna (660)</td><td>Milan (0)</td></tr>
+<tr><td>Cort (330)</td><td>Kooij (285)</td><td>Ganna (660)</td><td>Matthews (420)</td><td>Ganna (660)</td><td>Ganna (660)</td><td>Ganna (660)</td><td>Mihkels (0)</td><td>Pedersen (300)</td><td>Ganna (660)</td></tr>
+<tr><td>Sobrero (0)</td><td>Campenaerts (0)</td><td>Vauquelin (0)</td><td>Skaarseth (0)</td><td>Tulett (180)</td><td>Tjøtta (0)</td><td>Campenaerts (0)</td><td>Aular (36)</td><td>Sütterlin (0)</td><td>Tarozzi (0)</td></tr>
+<tr><td>Pluimers (0)</td><td>Pedersen (300)</td><td>Azparren (0)</td><td>Sütterlin (0)</td><td>Pluimers (0)</td><td>Sütterlin (0)</td><td>Hamilton (0)</td><td>Askey (0)</td><td>Vauquelin (0)</td><td>Pluimers (0)</td></tr>
+<tr><td>Tulett (180)</td><td>Skaarseth (0)</td><td>Skaarseth (0)</td><td>Azparren (0)</td><td>Skaarseth (0)</td><td>Vinokurov (0)</td><td>Tjøtta (0)</td><td>Tarozzi (0)</td><td>Azparren (0)</td><td>Quartucci (0)</td></tr>
+</tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById("myBarChart").getContext("2d");
+        
+            // Load data from the placeholder
+            const chartData = JSON.parse(document.getElementById("chart-data").textContent);
+        
+            new Chart(ctx, {
+                type: "bar",
+                data: chartData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false  // Ensure legend is hidden
+                        }
+                    },
+                    elements: {
+                        bar: {
+                            borderWidth: 0  // Optional: hides the bar borders for a cleaner look
+                        }
+                    }
+                }
+            });
+        });
+        </script>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

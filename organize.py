@@ -55,7 +55,7 @@ def generate_directory_html(directory, output_file):
             for subdir_name in sorted(subdirs.keys()):
                 files = subdirs[subdir_name]
                 html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}: '
-                for file in files:
+                for file in sorted(files, reverse=True):
                     html += f'                        <a href="{os.path.join(directory, race_name, subdir_name, file)}">{get_file_name(file)}</a>\n'
                 #html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}\n'
                 #html += "                    <ul class=\"list-group ms-3\">\n"
@@ -129,7 +129,7 @@ def generate_directory(directory, output_file):
                 race_dirs[race_name] = html_files
 
     # For each race, generate the nested HTML structure
-    for race_name, subdirs in race_dirs.items():
+    for race_name, subdirs in sorted(race_dirs.items()):
         html += f'        <li class="list-group-item list-group-item-primary">{race_name}\n'
         html += "            <ul class=\"list-group ms-3\">\n"
         
@@ -139,13 +139,13 @@ def generate_directory(directory, output_file):
                 files = subdirs[subdir_name]
                 html += f'                <li class="list-group-item list-group-item-secondary">{subdir_name}\n'
                 html += "                    <ul class=\"list-group ms-3\">\n"
-                for file in files:
+                for file in sorted(files):
                     html += f'                        <li class="list-group-item"><a href="{os.path.join(directory, race_name, subdir_name, file)}">{get_file_name(file)}</a></li>\n'
                 html += "                    </ul>\n"
                 html += "                </li>\n"
         else:  # If there are no subdirectories
-            for file in subdirs:
-                html += f'            <li class="list-group-item"><a href="{os.path.join(directory, race_name, file)}">{get_file_name(file)}</a></li>\n'
+            for file in sorted(subdirs):
+                html += f'            <li class="list-group-item"><a href="{os.path.join(directory, race_name, file)}">{get_file_name(file)}" </a></li>\n'
         
         html += "            </ul>\n"
         html += "        </li>\n"
@@ -167,6 +167,8 @@ def generate_directory(directory, output_file):
 def get_file_name(file):
     if "teams" in file:
         file_name = "Teams"
+    elif "results" in file:
+        file_name = "Results"
     else:
         file_name = file
     return file_name
