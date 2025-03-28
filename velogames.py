@@ -222,11 +222,16 @@ def generate_html(full_team, race):
     
     # Create dataset for each rider
     rider_point_dict = {}
+    manager_points = {}
     for manager, riders in team_dict.items():
         for i, (rider, points) in enumerate(riders):
             if rider not in rider_point_dict:
                 rider_point_dict[rider] = [0] * len(sorted_managers)
             rider_point_dict[rider][sorted_managers.index(manager)] = points
+        # Calculate total points for each manager
+        total_points = sum([rider[1] for rider in riders])
+        manager_points[manager] = total_points
+    best_manager = max(manager_points, key=manager_points.get)
 
     for rider, points in rider_point_dict.items():
         datasets.append({
@@ -253,6 +258,7 @@ def generate_html(full_team, race):
         header += f" - {race['stage_id']}"
     elif race.get('stage'):
         header += f" - {race['stage']}"
+    header += f": Winner {best_manager}"
 
     template_html = template_html.replace("<!-- HEADER GOES HERE -->", header)
     template_html = template_html.replace("<!-- CHART DATA GOES HERE -->", chart_data_json)

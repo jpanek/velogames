@@ -1,16 +1,4 @@
 TID,Team Name,Manager,Rider,Points
-63016,Short term glory,Jon,Van Der Poel,0
-63016,Short term glory,Jon,Ganna,0
-63016,Short term glory,Jon,Jorgenson,0
-63016,Short term glory,Jon,Van Moer,0
-63016,Short term glory,Jon,Aular,0
-63016,Short term glory,Jon,Hollmann,0
-96467,Buba Rače | Lease a Pate,Inga,Milan,0
-96467,Buba Rače | Lease a Pate,Inga,Van Gestel,0
-96467,Buba Rače | Lease a Pate,Inga,Van Aert,0
-96467,Buba Rače | Lease a Pate,Inga,Ganna,0
-96467,Buba Rače | Lease a Pate,Inga,Hvideberg,0
-96467,Buba Rače | Lease a Pate,Inga,Gaze,0
 96890,Turn Down for Wout,Carson,Van Der Poel,0
 96890,Turn Down for Wout,Carson,Pedersen,0
 96890,Turn Down for Wout,Carson,Morgado,0
@@ -29,18 +17,18 @@ TID,Team Name,Manager,Rider,Points
 61998,Combattant du Nord,Rogier,Vacek,0
 61998,Combattant du Nord,Rogier,Mihkels,0
 61998,Combattant du Nord,Rogier,Skaarseth,0
-74628,Spin Cycle,Dane,Van Aert,0
-74628,Spin Cycle,Dane,Van Der Poel,0
-74628,Spin Cycle,Dane,Ganna,0
-74628,Spin Cycle,Dane,Riesebeek,0
-74628,Spin Cycle,Dane,Price-Pejtersen,0
-74628,Spin Cycle,Dane,Deweirdt,0
-96535,Nice For Watts,Rihards,Pedersen,0
-96535,Nice For Watts,Rihards,Van Aert,0
-96535,Nice For Watts,Rihards,Van Der Poel,0
-96535,Nice For Watts,Rihards,Clynhens,0
-96535,Nice For Watts,Rihards,Chamberlain,0
-96535,Nice For Watts,Rihards,Skaarseth,0
+63016,Short term glory,Jon,Van Der Poel,0
+63016,Short term glory,Jon,Ganna,0
+63016,Short term glory,Jon,Jorgenson,0
+63016,Short term glory,Jon,Van Moer,0
+63016,Short term glory,Jon,Aular,0
+63016,Short term glory,Jon,Hollmann,0
+96467,Buba Rače | Lease a Pate,Inga,Milan,0
+96467,Buba Rače | Lease a Pate,Inga,Van Gestel,0
+96467,Buba Rače | Lease a Pate,Inga,Van Aert,0
+96467,Buba Rače | Lease a Pate,Inga,Ganna,0
+96467,Buba Rače | Lease a Pate,Inga,Hvideberg,0
+96467,Buba Rače | Lease a Pate,Inga,Gaze,0
 20487,Pedaling Squares,John,Pogačar,0
 20487,Pedaling Squares,John,Van Der Poel,0
 20487,Pedaling Squares,John,Matthews,0
@@ -59,3 +47,15 @@ TID,Team Name,Manager,Rider,Points
 62321,Peaky blunders,Manuel,Jungels,0
 62321,Peaky blunders,Manuel,Schwarzmann,0
 62321,Peaky blunders,Manuel,Veistroffer,0
+74628,Spin Cycle,Dane,Van Aert,0
+74628,Spin Cycle,Dane,Van Der Poel,0
+74628,Spin Cycle,Dane,Ganna,0
+74628,Spin Cycle,Dane,Riesebeek,0
+74628,Spin Cycle,Dane,Price-Pejtersen,0
+74628,Spin Cycle,Dane,Deweirdt,0
+96535,Nice For Watts,Rihards,Pedersen,0
+96535,Nice For Watts,Rihards,Van Aert,0
+96535,Nice For Watts,Rihards,Van Der Poel,0
+96535,Nice For Watts,Rihards,Clynhens,0
+96535,Nice For Watts,Rihards,Chamberlain,0
+96535,Nice For Watts,Rihards,Skaarseth,0
