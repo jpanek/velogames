@@ -229,7 +229,7 @@ def generate_html(full_team, race):
                 rider_point_dict[rider] = [0] * len(sorted_managers)
             rider_point_dict[rider][sorted_managers.index(manager)] = points
         # Calculate total points for each manager
-        total_points = sum([rider[1] for rider in riders])
+        total_points = sum([int(rider[1]) for rider in riders])
         manager_points[manager] = total_points
     best_manager = max(manager_points, key=manager_points.get)
 
