@@ -1,10 +1,10 @@
 Juraj: Van Der Poel, Pedersen, Jorgenson, Tarling, Deman, Clynhens
-Rogier: Van Der Poel, Naesen, Jorgenson, Vacek, Mihkels, Skaarseth
 Jon: Van Der Poel, Ganna, Jorgenson, Van Moer, Aular, Hollmann
-Inga: Milan, Van Gestel, Van Aert, Ganna, Hvideberg, Gaze
-Carson: Van Der Poel, Pedersen, Morgado, Van Dijke, Tarling, Deweirdt
-John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
-Simis: Van Der Poel, Van Aert, Veistroffer, Pithie, Tarling, Mihkels
-Manuel: Van Der Poel, Van Aert, Ganna, Jungels, Schwarzmann, Veistroffer
 Dane: Van Aert, Van Der Poel, Ganna, Riesebeek, Price-Pejtersen, Deweirdt
 Rihards: Pedersen, Van Aert, Van Der Poel, Clynhens, Chamberlain, Skaarseth
+Carson: Van Der Poel, Pedersen, Morgado, Van Dijke, Tarling, Deweirdt
+Manuel: Van Der Poel, Van Aert, Ganna, Jungels, Schwarzmann, Veistroffer
+Rogier: Van Der Poel, Naesen, Jorgenson, Vacek, Mihkels, Skaarseth
+Simis: Van Der Poel, Van Aert, Veistroffer, Pithie, Tarling, Mihkels
+John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
+Inga: Milan, Van Gestel, Van Aert, Ganna, Hvideberg, Gaze
