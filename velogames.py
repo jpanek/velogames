@@ -258,7 +258,7 @@ def generate_html(full_team, race):
         header += f" - {race['stage_id']}"
     elif race.get('stage'):
         header += f" - {race['stage']}"
-    header += f": Winner {best_manager}"
+    header += f": <b>Winner {best_manager}</b>"
 
     template_html = template_html.replace("<!-- HEADER GOES HERE -->", header)
     template_html = template_html.replace("<!-- CHART DATA GOES HERE -->", chart_data_json)
