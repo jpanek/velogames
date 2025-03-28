@@ -1,25 +1,50 @@
 import os
+from datetime import datetime
+import pytz
+
 
 def generate_directory_html(directory, output_file):
     # Create a header for the HTML page with Bootstrap
     html = """<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MFCC</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        ul { list-style-type: none; padding-left: 20px; }
-        li { margin: 5px 0; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="my-4">Velogames MFCC teams</h1>
-        <ul class="list-group">
-"""
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MFCC</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            ul { list-style-type: none; padding-left: 20px; }
+            li { margin: 5px 0; }
+        </style>
+    </head>
+    <body>"""
+
+    # Define Jakarta timezone
+    jakarta_tz = pytz.timezone('Asia/Jakarta')
+
+    # Get the current time in UTC and convert to Jakarta time
+    jakarta_time = datetime.now(jakarta_tz)
+
+    # Format the datetime as needed
+    jkt_time = jakarta_time.strftime("%d %B '%y %H:%M")
+
+
+    # Get the current datetime
+    now = datetime.now()
+    # Format the datetime
+    formatted_datetime = now.strftime("%d %B '%y %H:%M")
+    html += f"""
+    <div class="alert alert-info text-center" role="alert">
+        Updated {formatted_datetime} CET ({jkt_time} Jakarta time for kampung MFers)
+    </div>
+    """
+
+    html += """
+        <div class="container">
+            <h1 class="my-4">Velogames MFCC teams</h1>
+            <ul class="list-group">
+    """
 
     # Walk through the directory and create a dictionary to group files by race name
     race_dirs = {}
