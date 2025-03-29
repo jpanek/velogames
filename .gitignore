@@ -9,6 +9,9 @@ venv/
 *.env
 *.venv
 
+#large_file
+dev_files/
+
 # Jupyter Notebooks
 jupyter/
 
