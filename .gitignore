@@ -33,3 +33,6 @@ cron_log.txt
 
 #auto files:
 update_velogames.sh
+
+#differnet sub-app
+flask_app/
