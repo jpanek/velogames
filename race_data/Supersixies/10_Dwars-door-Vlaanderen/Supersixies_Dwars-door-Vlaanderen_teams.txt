@@ -1,10 +1,10 @@
-John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
-Simis: Pedersen, Jorgenson, Van Der Hoorn, Swift, Wellens, Pithie
-Manuel: Van Aert, Milan, Merlier, Walscheid, Bruttomesso, Lozouet
 Dane: Pedersen, Van Aert, Jorgenson, Van Dijke, Vandevelde, Declercq
-Rihards: Kristoff, Milan, Philipsen, Berckmoes, Fretin, Skaarseth
-Juraj: Merlier, Milan, Philipsen, Ballerini, Russo, Mihkels
+Simis: Pedersen, Jorgenson, Van Der Hoorn, Swift, Wellens, Pithie
 Rogier: Politt, Tarling, Jorgenson, Sheffield, Stuyven, Eekhoff
+Manuel: Van Aert, Milan, Merlier, Walscheid, Bruttomesso, Lozouet
 Jon: Pedersen, Wellens, Philipsen, Tarling, Del Grosso, Pedersen
 Inga: Pedersen, Abrahamsen, Merlier, Milan, Skaarseth, Ermakov
 Carson: Milan, Pedersen, Philipsen, Tarling, Pedersen, Naberman
+Juraj: Merlier, Milan, Philipsen, Ballerini, Russo, Mihkels
+John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
+Rihards: Kristoff, Milan, Philipsen, Berckmoes, Fretin, Skaarseth
