@@ -1,10 +1,10 @@
-Inga: Milan, Lampaert, Philipsen, Jorgenson, Todome, Chamberlain
-Carson: Philipsen, Pedersen, Milan, Tarling, Watson, Hesters
-Juraj: Pedersen, Philipsen, Kooij, Wærenskjold, Gazzoli, Vandenbranden
+Manuel: Pedersen, Merlier, Milan, Abrahamsen, Vandenbranden, Thierry
 Rogier: Pedersen, Wærenskjold, Meeus, Milan, Mihkels, Skaarseth
+Dane: Pedersen, Merlier, Matthews, Molano, Vandenbranden, Hoole
+Carson: Philipsen, Pedersen, Milan, Tarling, Watson, Hesters
+Simis: Philipsen, Milan, Merlier, Bennett, Rickaert, Skaarseth
 Jon: Pedersen, Ganna, Kooij, Magnier, De Gendt, Pickrell
 Rihards: Pedersen, Jorgenson, Molano, Matthews, Van Belle, Vercouillie
+Juraj: Pedersen, Philipsen, Kooij, Wærenskjold, Gazzoli, Vandenbranden
+Inga: Milan, Lampaert, Philipsen, Jorgenson, Todome, Chamberlain
 John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
-Simis: Philipsen, Milan, Merlier, Bennett, Rickaert, Skaarseth
-Manuel: Pedersen, Merlier, Milan, Abrahamsen, Vandenbranden, Thierry
-Dane: Pedersen, Merlier, Matthews, Molano, Vandenbranden, Hoole
