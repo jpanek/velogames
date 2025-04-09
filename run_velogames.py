@@ -116,7 +116,7 @@ roubaix = {
 
 
 #races = [torino, msr, bruge, e3, catalunya]
-supersixies = [torino, msr, bruge,e3, gent, dwars, scheldeprijs, roubaix]
+supersixies = [torino, msr, bruge,e3, gent, dwars, rvv, scheldeprijs, roubaix]
 stage_races = [catalunya]
 
 today = datetime.today().date()
