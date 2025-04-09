@@ -132,7 +132,7 @@ if 1:
             if results:
                 generate_html(teams,race)
 
-if 1:
+if 0:
     for race in stage_races:
         race_start = datetime.strptime(race["race_start"], "%Y-%m-%d").date()
         race_end = datetime.strptime(race["race_end"], "%Y-%m-%d").date()
