@@ -88,7 +88,7 @@ rvv = {
     "league_id":61627774,
     "stage":"RVV",
     "stage_id":11,
-    "race_date":"2025-04-09",
+    "race_date":"2025-04-06",
     "url":"https://www.velogames.com/sixes-superclasico/2025/leaguescores.php?league={league_id}&ga=13&st={stage_id}",
     "team_url":"https://www.velogames.com/sixes-superclasico/2025/teamroster.php?tid={team_id}&ga=13&st={stage_id}"
 }
