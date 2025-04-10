@@ -120,7 +120,7 @@ supersixies = [torino, msr, bruge,e3, gent, dwars, rvv, scheldeprijs, roubaix]
 stage_races = [catalunya]
 
 today = datetime.today().date()
-day_after = today + timedelta(days=1)
+day_after = today + timedelta(days=-1)
 print(day_after)
 
 if 1:
