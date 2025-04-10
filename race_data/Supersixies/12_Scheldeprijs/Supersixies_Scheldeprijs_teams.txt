@@ -1,10 +1,10 @@
-John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren
-Simis: Philipsen, Merlier, Welsford, Teutenberg, Moschetti, Fretin
-Manuel: Merlier, Groenewegen, Kristoff, Walscheid, Welsford, De Gendt
-Dane: Philipsen, Merlier, Groenewegen, Kristoff, Price-Pejtersen, Belmans
 Rihards: Merlier, Groenewegen, Philipsen, Fretin, Moschetti, Vercouillie
-Juraj: Merlier, Philipsen, Welsford, Bol, Bittner, Walscheid
+Simis: Philipsen, Merlier, Welsford, Teutenberg, Moschetti, Fretin
+Carson: Philipsen, Merlier, Fretin, Welsford, Kubiš, Bittner
+Dane: Philipsen, Merlier, Groenewegen, Kristoff, Price-Pejtersen, Belmans
 Rogier: Merlier, Thijssen, Philipsen, Bittner, Belmans, Groenewegen
 Jon: Philipsen, Merlier, Thijssen, Welsford, Fretin, Raccagni Noviero
 Inga: Merlier, Groenewegen, Kristoff, Van Poppel, Consonni, Rickaert
-Carson: Philipsen, Merlier, Fretin, Welsford, Kubiš, Bittner
+Juraj: Merlier, Philipsen, Welsford, Bol, Bittner, Walscheid
+Manuel: Merlier, Groenewegen, Kristoff, Walscheid, Welsford, De Gendt
+John: Pogačar, Van Der Poel, Matthews, Skaarseth, Sütterlin, Azparren

@@ -120,13 +120,12 @@ supersixies = [torino, msr, bruge,e3, gent, dwars, rvv, scheldeprijs, roubaix]
 stage_races = [catalunya]
 
 today = datetime.today().date()
-day_after = today + timedelta(days=-1)
-print(day_after)
+day_before = today + timedelta(days=-1)
 
 if 1:
     for race in supersixies:
         race_date = datetime.strptime(race["race_date"], "%Y-%m-%d").date()
-        if race_date == today or race_date == day_after:
+        if race_date == today or race_date == day_before:
             teams, results = get_teams(race)
             save_team_text(teams, race)
             save_team_html(teams,race)
