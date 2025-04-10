@@ -121,6 +121,7 @@ stage_races = [catalunya]
 
 today = datetime.today().date()
 day_after = today + timedelta(days=1)
+print(day_after)
 
 if 1:
     for race in supersixies:
